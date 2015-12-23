@@ -1,0 +1,17 @@
+<template>
+  <!-- CSS -->
+  <require from="../styles/fonts/fonts.css!css"></require>
+  <require from="../styles/main.css!css"></require>
+
+  <require from="example/nav-bar.html"></require>
+  
+  <!-- Narbar -->
+  <nav-bar router.bind="router"></nav-bar>
+
+  <!-- Page content -->
+  <section class="body-content">
+    <div class="container full">
+      <router-view></router-view>
+    </div>  
+  </section>  
+</template>

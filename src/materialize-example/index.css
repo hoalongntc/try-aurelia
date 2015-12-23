@@ -1,0 +1,15 @@
+.side-nav {
+  position: absolute;
+  left: 0;
+  top 64px;
+  bottom: 0;
+  height: 100%;
+}
+
+.page-content {
+  position: absolute;;
+  left: 240px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}

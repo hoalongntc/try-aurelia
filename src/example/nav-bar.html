@@ -1,0 +1,32 @@
+<template>
+  <nav>
+    <ul class="hide-on-med-and-down">
+      <li repeat.for="row of router.navigation" class="${row.isActive ? 'active' : ''}">
+          <a href.bind="row.href">${row.title}</a>
+      </li>
+
+      <li><a  href="#/materialize" class="dropdown-button" 
+              mdi-dropdown="hover: true" data-activates="dd-materialize">
+        Materialize<i class="material-icons right">arrow_drop_down</i>
+      </a></li>
+    </ul>
+    <ul id="dd-materialize" class="dropdown-content">
+      <li><a href="#/materialize/collapsible">Collapsible</a></li>
+      <li><a href="#/materialize/dropdown">Dropdown</a></li>
+      <li><a href="#/materialize/side-nav">Side Nav</a></li>
+    </ul>
+
+    <ul id="slide-out" class="side-nav">
+      <li repeat.for="row of router.navigation" class="${row.isActive ? 'active' : ''}">
+          <a href.bind="row.href">${row.title}</a>
+      </li>
+    </ul>
+
+    <a mdi-size-nav data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+  </nav>
+
+  <!-- Progress bar -->
+  <div class="progress" if.bind="router.isNavigating">
+      <div class="indeterminate"></div>
+  </div>
+</template>
